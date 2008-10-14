@@ -15,21 +15,9 @@ namespace BaseManageFramework.Web
 {
     public partial class _Default : System.Web.UI.Page
     {
-        //public SystemApplicationService SystemApplicationServiceIocID { get; set; }
-        //public NhibernateDeployHelper DeployHelper { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //IApplicationContext ctx = ContextRegistry.GetContext();
-            ////WebApplicationContext sp = this.Context as WebApplicationContext;
-            //if (ctx != null)
-            //    this.Response.Write(ctx.ToString());
-            //SQLiteDialect dialect = new SQLiteDialect();
-            //this.Response.Write(DeployHelper.GenerateSchemaCreationScript(dialect));
-
-            //MsSql2000Dialect dialect = new MsSql2000Dialect();
-
-            //this.Response.Write(NhibernateDeployHelper.GenerateSchemaCreationScript(dialect));
         }
     }
 }
