@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F964E015-1E9C-4C31-A183-8724A1A5D01A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Easyasp.Framework.Core</RootNamespace>
+    <AssemblyName>Easyasp.Framework.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\lib\Net\2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\lib\Net\2.0\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Project\DMS\deploybin\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Project\DMS\deploybin\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Project\DMS\deploybin\bin\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\游戏视频\MGS4全中文剧情\NHibernate-2.0.0.GA-bin\bin\net-2.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate20, Version=1.2.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\src\Spring\Spring.Data.NHibernate20\obj\Release\Spring.Data.NHibernate20.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseManage\BaseWebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseManage\NhibernateDeployHelper.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemApplicationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemDepartmentBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemDictionaryBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemLogBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemMenuBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemMoudleBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemMoudleFieldBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemOperationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemPrivilegeBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemPrivilegeInRolesBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemPrivilegeParameterBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemResourcesBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemRoleApplicationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemRoleBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemRoleMenuRelationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemSettingBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemShortMessageBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemUserBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemUserGroupBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemUserGroupRoleRelationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemUserGroupUserRelationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemUserProfileBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemUserRoleRelationBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemViewBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\BaseDao\SystemViewItemBaseDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\DaosContainer.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemApplicationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemDepartmentDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemDictionaryDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemLogDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemMenuDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemMoudleDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemMoudleFieldDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemOperationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemPrivilegeDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemPrivilegeInRolesDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemPrivilegeParameterDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemResourcesDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemRoleApplicationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemRoleDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemRoleMenuRelationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemSettingDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemShortMessageDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemUserDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemUserGroupDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemUserGroupRoleRelationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemUserGroupUserRelationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemUserProfileDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemUserRoleRelationDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemViewDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Daos\Dao\SystemViewItemDao.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemApplicationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemDepartmentBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemDictionaryBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemLogBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemMenuBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemMoudleBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemMoudleFieldBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemOperationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemPrivilegeBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemPrivilegeInRolesBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemPrivilegeParameterBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemResourcesBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemRoleApplicationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemRoleBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemRoleMenuRelationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemSettingBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemShortMessageBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemUserBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemUserGroupBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemUserGroupRoleRelationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemUserGroupUserRelationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemUserProfileBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemUserRoleRelationBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemViewBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\BaseDomain\SystemViewItemBase.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemApplication.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemDepartment.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemDictionary.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemLog.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemMenu.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemMoudle.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemMoudleField.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemOperation.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemPrivilege.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemPrivilegeInRoles.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemPrivilegeParameter.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemResources.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemRole.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemRoleApplication.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemRoleMenuRelation.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemSetting.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemShortMessage.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemUser.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemUserGroup.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemUserGroupRoleRelation.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemUserGroupUserRelation.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemUserProfile.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemUserRoleRelation.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemView.cs" />
+    <Compile Include="BaseManage\SpringBase\Domains\Domain\SystemViewItem.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemApplicationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemDepartmentBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemDictionaryBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemLogBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemMenuBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemMoudleBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemMoudleFieldBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemOperationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemPrivilegeBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemPrivilegeInRolesBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemPrivilegeParameterBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemResourcesBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemRoleApplicationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemRoleBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemRoleMenuRelationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemSettingBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemShortMessageBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemUserBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemUserGroupBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemUserGroupRoleRelationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemUserGroupUserRelationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemUserProfileBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemUserRoleRelationBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemViewBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\BaseService\SystemViewItemBaseService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\ServicesContainer.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemApplicationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemDepartmentService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemDictionaryService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemLogService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemMenuService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemMoudleFieldService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemMoudleService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemOperationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemPrivilegeInRolesService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemPrivilegeParameterService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemPrivilegeService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemResourcesService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemRoleApplicationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemRoleMenuRelationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemRoleService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemSettingService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemShortMessageService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemUserGroupRoleRelationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemUserGroupService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemUserGroupUserRelationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemUserProfileService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemUserRoleRelationService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemUserService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemViewItemService.cs" />
+    <Compile Include="BaseManage\SpringBase\Services\Service\SystemViewService.cs" />
+    <Compile Include="Compress\Collections\BinarySearchTree.cs" />
+    <Compile Include="Compress\Collections\BinaryTree.cs" />
+    <Compile Include="Compress\Collections\BinaryTreeNode.cs" />
+    <Compile Include="Compress\Collections\BSTreeNode.cs" />
+    <Compile Include="Compress\Collections\DataSetWrap.cs" />
+    <Compile Include="Compress\Collections\DateTimeWrap.cs" />
+    <Compile Include="Compress\Collections\DoubleLink.cs" />
+    <Compile Include="Compress\Collections\HashSet.cs" />
+    <Compile Include="Compress\Collections\ILink.cs" />
+    <Compile Include="Compress\Collections\ILinkNode.cs" />
+    <Compile Include="Compress\Collections\IObjectXmlSerializable.cs" />
+    <Compile Include="Compress\Collections\ISet.cs" />
+    <Compile Include="Compress\Collections\ITree.cs" />
+    <Compile Include="Compress\Collections\ITreeNode.cs" />
+    <Compile Include="Compress\Collections\ITreeNodeList.cs" />
+    <Compile Include="Compress\Collections\Link.cs" />
+    <Compile Include="Compress\Collections\LinkNode.cs" />
+    <Compile Include="Compress\Collections\ObjectTable.cs" />
+    <Compile Include="Compress\Collections\OrderedTable.cs" />
+    <Compile Include="Compress\Collections\Set.cs" />
+    <Compile Include="Compress\Collections\SetBase.cs" />
+    <Compile Include="Compress\Collections\SingleLink.cs" />
+    <Compile Include="Compress\Collections\StringTable.cs" />
+    <Compile Include="Compress\Collections\Tree.cs" />
+    <Compile Include="Compress\Collections\TreeBase.cs" />
+    <Compile Include="Compress\Collections\TreeNode.cs" />
+    <Compile Include="Compress\Collections\TreeNodeBase.cs" />
+    <Compile Include="Compress\Collections\TreeNodeList.cs" />
+    <Compile Include="Compress\Collections\TreeTraversal.cs" />
+    <Compile Include="Compress\Collections\ValueTable.cs" />
+    <Compile Include="Compress\Collections\XmlWrap.cs" />
+    <Compile Include="Compress\SevenZip\Common\CommandLineParser.cs" />
+    <Compile Include="Compress\SevenZip\Common\CRC.cs" />
+    <Compile Include="Compress\SevenZip\Common\InBuffer.cs" />
+    <Compile Include="Compress\SevenZip\Common\OutBuffer.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LzmaAlone\LzmaAlone.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LzmaAlone\LzmaBench.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZMA\LzmaBase.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZMA\LzmaDecoder.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZMA\LzmaEncoder.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZ\IMatchFinder.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZ\LzBinTree.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZ\LzInWindow.cs" />
+    <Compile Include="Compress\SevenZip\Compress\LZ\LzOutWindow.cs" />
+    <Compile Include="Compress\SevenZip\Compress\RangeCoder\RangeCoder.cs" />
+    <Compile Include="Compress\SevenZip\Compress\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="Compress\SevenZip\Compress\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="Compress\SevenZip\ICoder.cs" />
+    <Compile Include="Compress\SevenZip\SevenZipCodeHelper.cs" />
+    <Compile Include="CustomException\DataValidationException.cs" />
+    <Compile Include="Intergration\Ados\AggregateParameter.cs" />
+    <Compile Include="Intergration\Ados\BaseAdoNetDao.cs" />
+    <Compile Include="Intergration\Ados\WhereParameter.cs" />
+    <Compile Include="Intergration\BaseWebPage\BaseDataEditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intergration\BaseWebPage\BaseDataManagePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intergration\BaseWebPage\BaseDataViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intergration\EventHandles\CommandButtonEventArgs.cs" />
+    <Compile Include="Intergration\EventHandles\MessageEventArgs.cs" />
+    <Compile Include="Intergration\EventHandles\NHibernateDaoEventHandle.cs" />
+    <Compile Include="Intergration\EventHandles\SelectDataEventArgs.cs" />
+    <Compile Include="Intergration\EventHandles\WebDataPageHander.cs" />
+    <Compile Include="Intergration\IBaseAdoDao.cs" />
+    <Compile Include="Intergration\IBaseNHibernateDao.cs" />
+    <Compile Include="Intergration\IGenericDao.cs" />
+    <Compile Include="Intergration\NHibernate\NhibernateParameter.cs" />
+    <Compile Include="Intergration\NHibernate\NhibernateParameterCollection.cs" />
+    <Compile Include="Intergration\Springs\BaseSpringAdoDao.cs" />
+    <Compile Include="Intergration\Springs\BaseSpringNHibernateDao.cs" />
+    <Compile Include="Intergration\Springs\BaseSpringNHibernateService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ArrayUtil.cs" />
+    <Compile Include="Utility\BitUtil.cs" />
+    <Compile Include="Utility\BufferUtil.cs" />
+    <Compile Include="Utility\ConfigurationUtil.cs" />
+    <Compile Include="Utility\CryptographyUtil.cs" />
+    <Compile Include="Utility\DataSetUtil.cs" />
+    <Compile Include="Utility\DateTimeUtil.cs" />
+    <Compile Include="Utility\FieldInfoCollection.cs" />
+    <Compile Include="Utility\FileUtil.cs" />
+    <Compile Include="Utility\ReflectionUtil.cs" />
+    <Compile Include="Utility\SafeReaderUtil.cs" />
+    <Compile Include="Utility\SerializableUtil.cs" />
+    <Compile Include="Utility\StringUtil.cs" />
+    <Compile Include="Utility\WebUtil.cs" />
+    <Compile Include="Web\ControlHelper\ControlHelper.cs" />
+    <Compile Include="Web\ControlHelper\DataBindHelper.cs" />
+    <Compile Include="Web\ControlHelper\GridViewHelper.cs" />
+    <Compile Include="Web\Security\LoginPermissionPrincipal.cs" />
+    <Compile Include="Web\Security\NhibernateMembershipProviderExceptionUtil.cs" />
+    <Compile Include="Web\Security\NhibernateMenberShipProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\Security\NhibernateRolesProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\GridViewIDConverter.cs" />
+    <Compile Include="Web\UI\LastNavigatePageInfo.cs" />
+    <Compile Include="Web\UI\MessageType.cs" />
+    <Compile Include="Web\UI\SuperWebTreeNode.cs" />
+    <Compile Include="Web\UI\WebControls\GridViewFunctionExtenderDesigner.cs" />
+    <Compile Include="Web\UI\WebControls\GridViewFunctionExtender.cs" />
+    <Compile Include="Web\UI\WebControls\GridViewTableCell.cs" />
+    <Compile Include="Web\UI\WebMessageBoxButtons.cs" />
+    <Compile Include="Xml\XmlConst.cs" />
+    <Compile Include="Xml\XmlSchemaUtil.cs" />
+    <Compile Include="Xml\XmlUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemApplication.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemDepartment.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemDictionary.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemLog.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemMenu.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemMoudle.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemMoudleField.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemOperation.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemPrivilege.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemPrivilegeInRoles.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemPrivilegeParameter.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemResources.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemRole.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemRoleApplication.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemRoleMenuRelation.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemSetting.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemShortMessage.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemUser.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemUserGroup.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemUserGroupRoleRelation.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemUserGroupUserRelation.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemUserProfile.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemUserRoleRelation.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemView.hbm.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Domains\Hbm\SystemViewItem.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseManage\SpringBase\Daos\ContainerFile\Daos.xml" />
+    <EmbeddedResource Include="BaseManage\SpringBase\Services\ContainerFile\Services.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseManage\CastleBase\" />
+    <Folder Include="Intergration\Castles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

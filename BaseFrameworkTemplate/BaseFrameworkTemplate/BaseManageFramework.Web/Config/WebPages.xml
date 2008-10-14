@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <!-- 供主程序配置文件引用 -->
+  <description>
+    Spring.Net框架页面层容器配置文件
+  </description>
+  
+  
+  <object type="~/Default.aspx">
+  </object>
+  
+  
+  
+  <object type="~/MainPage/Default.aspx">
+  </object>
+  <object type="~/MainPage/Left.aspx">
+    <property name="SystemMenuServiceInstance" ref="SystemMenuServiceIocID"></property>   
+  </object>
+  <object type="~/MainPage/Login.aspx">
+    <property name="SystemSettingServiceInstance" ref="SystemSettingServiceIocID"></property>
+  </object>
+  <object type="~/MainPage/Menu2.aspx">
+    <property name="SystemMenuServiceInstance" ref="SystemMenuServiceIocID"></property>
+  </object>
+  <object type="~/MainPage/Right.aspx">
+  </object>
+
+
+
+  <object type="~/Moudle/BaseFrameWork/SystemApplicationManage/ApplicationManage/ListPage.aspx">
+    <property name="SystemApplicationServiceInstance" ref="SystemApplicationServiceIocID"></property>
+  </object>
+
+  <object type="~/UC/UCMenuHead.ascx" abstract="true">
+    <property name="SystemUserServiceInstance" ref="SystemUserServiceIocID"></property>
+    <property name="SystemPrivilegeServiceInstance" ref="SystemPrivilegeServiceIocID"></property>
+  </object>
+</objects>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemPrivilege,Easyasp.Framework.Core" table="SystemPrivilege"  lazy="true"    >
+
+
+		<id name="PrivilegeID" column="Privilege_ID" type="Int32"  unsaved-value="0" >
+			<generator class="native"/>
+		</id>
+
+
+		<many-to-one name="OperationID" column="Operation_ID" class="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemOperation,Easyasp.Framework.Core" />		
+		<many-to-one name="ResourcesID" column="Resources_ID" class="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemResources,Easyasp.Framework.Core" />		
+		<property column="PrivilegeCnName" type="string" name="PrivilegeCnName"   not-null="true"  length="200" />	
+		<property column="PrivilegeEnName" type="string" name="PrivilegeEnName"   not-null="true"  length="200" />	
+		<property column="DefaultValue" type="string" name="DefaultValue"   length="2000" />	
+		<property column="Description" type="string" name="Description"   length="2000" />	
+		<property column="PrivilegeOrder" type="Int32" name="PrivilegeOrder"   not-null="true"  />	
+
+	</class>
+</hibernate-mapping>

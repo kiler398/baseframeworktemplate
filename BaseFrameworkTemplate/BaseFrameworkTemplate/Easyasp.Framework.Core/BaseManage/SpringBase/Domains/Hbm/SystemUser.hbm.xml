@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemUser,Easyasp.Framework.Core" table="SystemUser"  lazy="true"    >
+
+
+		<id name="UserID" column="User_ID" type="Int32"  unsaved-value="0" >
+			<generator class="native"/>
+		</id>
+
+
+		<property column="User_LoginID" type="string" name="UserLoginID"   not-null="true"  length="50" />	
+		<property column="User_Name" type="string" name="UserName"   not-null="true"  length="50" />	
+		<property column="User_Email" type="string" name="UserEmail"   not-null="true"  length="50" />	
+		<property column="User_Password" type="string" name="UserPassword"   not-null="true"  length="50" />	
+		<property column="User_Status" type="string" name="UserStatus"   not-null="true"  length="50" />	
+		<property column="User_Create_Date" type="DateTime" name="UserCreateDate"   not-null="true"  />	
+		<property column="User_Type" type="string" name="UserType"   not-null="true"  length="50" />	
+		<many-to-one name="DepartmentID" column="Department_ID" class="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemDepartment,Easyasp.Framework.Core" />		
+		<property column="MobilePIN" type="string" name="MobilePIN"   length="16" />	
+		<property column="PasswordFormat" type="Int32" name="PasswordFormat"   />	
+		<property column="PasswordSalt" type="string" name="PasswordSalt"   length="128" />	
+		<property column="LoweredEmail" type="string" name="LoweredEmail"   length="128" />	
+		<property column="PasswordQuestion" type="string" name="PasswordQuestion"   length="255" />	
+		<property column="PasswordAnswer" type="string" name="PasswordAnswer"   length="255" />	
+		<property column="Comments" type="string" name="Comments"   length="3000" />	
+		<property column="IsApproved" type="Boolean" name="IsApproved"   />	
+		<property column="IsLockedOut" type="Boolean" name="IsLockedOut"   />	
+		<property column="LastActivityDate" type="DateTime" name="LastActivityDate"   />	
+		<property column="LastLoginDate" type="DateTime" name="LastLoginDate"   />	
+		<property column="LastLockedOutDate" type="DateTime" name="LastLockedOutDate"   />	
+		<property column="LastPasswordChangeDate" type="DateTime" name="LastPasswordChangeDate"   />	
+		<property column="FailedPwdAttemptCnt" type="Int32" name="FailedPwdAttemptCnt"   />	
+		<property column="FailedPwdAttemptWndStart" type="DateTime" name="FailedPwdAttemptWndStart"   />	
+		<property column="FailedPwdAnsAttemptCnt" type="Int32" name="FailedPwdAnsAttemptCnt"   />	
+		<property column="FailedPwdAnsAttemptWndStart" type="DateTime" name="FailedPwdAnsAttemptWndStart"   />	
+
+	</class>
+</hibernate-mapping>
