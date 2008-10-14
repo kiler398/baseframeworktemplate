@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+  <!-- 供主程序配置文件引用 -->
+  <description>
+    Spring.Net框架数据访问层容器配置文件
+  </description>
+  <!-- 数据访问类 -->
+ <object id="SystemApplicationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemApplicationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemDepartmentDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemDepartmentDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemDictionaryDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemDictionaryDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemLogDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemLogDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemMenuDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemMenuDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemMoudleDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemMoudleDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemMoudleFieldDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemMoudleFieldDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemOperationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemOperationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemPrivilegeDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemPrivilegeDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemPrivilegeInRolesDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemPrivilegeInRolesDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemPrivilegeParameterDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemPrivilegeParameterDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemResourcesDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemResourcesDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemRoleDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemRoleDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemRoleApplicationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemRoleApplicationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemRoleMenuRelationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemRoleMenuRelationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemSettingDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemSettingDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemShortMessageDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemShortMessageDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemUserDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemUserDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemUserGroupDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemUserGroupDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemUserGroupRoleRelationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemUserGroupRoleRelationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemUserGroupUserRelationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemUserGroupUserRelationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemUserProfileDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemUserProfileDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemUserRoleRelationDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemUserRoleRelationDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemViewDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemViewDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="SystemViewItemDaoIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.SystemViewItemDao, Easyasp.Framework.Core">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+ <object id="DaosContainerIocID" type="Easyasp.Framework.Core.BaseManage.SpringBase.Daos.Dao.DaosContainer, Easyasp.Framework.Core">
+    <property name="SystemApplicationDaoInstance" ref="SystemApplicationDaoIocID"/>
+    <property name="SystemDepartmentDaoInstance" ref="SystemDepartmentDaoIocID"/>
+    <property name="SystemDictionaryDaoInstance" ref="SystemDictionaryDaoIocID"/>
+    <property name="SystemLogDaoInstance" ref="SystemLogDaoIocID"/>
+    <property name="SystemMenuDaoInstance" ref="SystemMenuDaoIocID"/>
+    <property name="SystemMoudleDaoInstance" ref="SystemMoudleDaoIocID"/>
+    <property name="SystemMoudleFieldDaoInstance" ref="SystemMoudleFieldDaoIocID"/>
+    <property name="SystemOperationDaoInstance" ref="SystemOperationDaoIocID"/>
+    <property name="SystemPrivilegeDaoInstance" ref="SystemPrivilegeDaoIocID"/>
+    <property name="SystemPrivilegeInRolesDaoInstance" ref="SystemPrivilegeInRolesDaoIocID"/>
+    <property name="SystemPrivilegeParameterDaoInstance" ref="SystemPrivilegeParameterDaoIocID"/>
+    <property name="SystemResourcesDaoInstance" ref="SystemResourcesDaoIocID"/>
+    <property name="SystemRoleDaoInstance" ref="SystemRoleDaoIocID"/>
+    <property name="SystemRoleApplicationDaoInstance" ref="SystemRoleApplicationDaoIocID"/>
+    <property name="SystemRoleMenuRelationDaoInstance" ref="SystemRoleMenuRelationDaoIocID"/>
+    <property name="SystemSettingDaoInstance" ref="SystemSettingDaoIocID"/>
+    <property name="SystemShortMessageDaoInstance" ref="SystemShortMessageDaoIocID"/>
+    <property name="SystemUserDaoInstance" ref="SystemUserDaoIocID"/>
+    <property name="SystemUserGroupDaoInstance" ref="SystemUserGroupDaoIocID"/>
+    <property name="SystemUserGroupRoleRelationDaoInstance" ref="SystemUserGroupRoleRelationDaoIocID"/>
+    <property name="SystemUserGroupUserRelationDaoInstance" ref="SystemUserGroupUserRelationDaoIocID"/>
+    <property name="SystemUserProfileDaoInstance" ref="SystemUserProfileDaoIocID"/>
+    <property name="SystemUserRoleRelationDaoInstance" ref="SystemUserRoleRelationDaoIocID"/>
+    <property name="SystemViewDaoInstance" ref="SystemViewDaoIocID"/>
+    <property name="SystemViewItemDaoInstance" ref="SystemViewItemDaoIocID"/>
+ </object>
+</objects>

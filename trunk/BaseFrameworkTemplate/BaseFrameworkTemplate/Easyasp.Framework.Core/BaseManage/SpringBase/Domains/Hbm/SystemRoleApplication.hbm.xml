@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemRoleApplication,Easyasp.Framework.Core" table="SystemRoleApplication"  lazy="true"    >
+
+
+		<id name="SystemRoleApplicationID" column="SystemRoleApplication_ID" type="Int32"  unsaved-value="0" >
+			<generator class="native"/>
+		</id>
+
+
+		<many-to-one name="RoleID" column="Role_ID" class="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemRole,Easyasp.Framework.Core" />		
+		<many-to-one name="ApplicationID" column="Application_ID" class="Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain.SystemApplication,Easyasp.Framework.Core" />		
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,431 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C59C57C-0695-4ADF-B0D7-B96945560341}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseManageFramework.Web</RootNamespace>
+    <AssemblyName>BaseManageFramework.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AjaxControlToolkit-Framework3.5SP1-DllOnly\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AspNetPager702Src\bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\IE Web Controls\build\Microsoft.Web.UI.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Easyasp.Framework.Core\bin\Debug\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate20, Version=1.2.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\src\Spring\Spring.Data.NHibernate20\obj\Release\Spring.Data.NHibernate20.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\bin\net\2.0\release\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Config.xml" />
+    <Content Include="Config\Log4Net.xml" />
+    <Content Include="Config\WebPages.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="MainPage\Default.aspx" />
+    <Content Include="MainPage\Login.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage\Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\Menu2.aspx.cs">
+      <DependentUpon>Menu2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage\Menu2.aspx.designer.cs">
+      <DependentUpon>Menu2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\Right.aspx.cs">
+      <DependentUpon>Right.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage\Right.aspx.designer.cs">
+      <DependentUpon>Right.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\PageTemplate.Master.cs">
+      <DependentUpon>PageTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\PageTemplate.Master.designer.cs">
+      <DependentUpon>PageTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\AddPage.aspx.cs">
+      <DependentUpon>AddPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\AddPage.aspx.designer.cs">
+      <DependentUpon>AddPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx.cs">
+      <DependentUpon>ListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx.designer.cs">
+      <DependentUpon>ListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\UCMenuHead.ascx.cs">
+      <DependentUpon>UCMenuHead.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\UCMenuHead.ascx.designer.cs">
+      <DependentUpon>UCMenuHead.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCMessage.ascx.cs">
+      <DependentUpon>UCMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\UCMessage.ascx.designer.cs">
+      <DependentUpon>UCMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCToolBar.ascx.cs">
+      <DependentUpon>UCToolBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\UCToolBar.ascx.designer.cs">
+      <DependentUpon>UCToolBar.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Easyasp.Framework.Core\Easyasp.Framework.Core.csproj">
+      <Project>{F964E015-1E9C-4C31-A183-8724A1A5D01A}</Project>
+      <Name>Easyasp.Framework.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Site_Css.css" />
+    <Content Include="App_Themes\Default\treeStyle.css" />
+    <Content Include="images\BaseFramework\Login\login_bg.jpg" />
+    <Content Include="images\BaseFramework\Login\sitename_login.jpg" />
+    <Content Include="images\BaseFramework\MessageIcon\icon-error.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\icon-info.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\icon-question.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\icon-warning.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\MessageAlert.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\MessageBody.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\MessageEnd.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\MessageError.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\MessageHead.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\MessageOk.gif" />
+    <Content Include="images\BaseFramework\MessageIcon\msg_button_1.jpg" />
+    <Content Include="images\BaseFramework\MessageIcon\msg_icon_1.png" />
+    <Content Include="images\BaseFramework\MessageIcon\msg_title_1.jpg" />
+    <Content Include="MainPage\App_LocalResources\Login.aspx.resx" />
+    <Content Include="MainPage\Left.aspx" />
+    <Content Include="MainPage\Menu2.aspx" />
+    <Content Include="MainPage\Right.aspx" />
+    <Content Include="UC\UCMessage.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\BaseFramework\about.gif" />
+    <Content Include="images\BaseFramework\Button_On.GIF" />
+    <Content Include="images\BaseFramework\Button_Over.GIF" />
+    <Content Include="images\BaseFramework\controls4.gif" />
+    <Content Include="images\BaseFramework\down01.gif" />
+    <Content Include="images\BaseFramework\Help.gif" />
+    <Content Include="images\BaseFramework\house.gif" />
+    <Content Include="images\BaseFramework\indicator.gif" />
+    <Content Include="images\BaseFramework\Logo.gif" />
+    <Content Include="images\BaseFramework\logout.gif" />
+    <Content Include="images\BaseFramework\Menu\arrow.gif" />
+    <Content Include="images\BaseFramework\Menu\box_bg.gif" />
+    <Content Include="images\BaseFramework\Menu\box_bottom.gif" />
+    <Content Include="images\BaseFramework\Menu\box_topbg.gif" />
+    <Content Include="images\BaseFramework\Menu\box_topleft.gif" />
+    <Content Include="images\BaseFramework\Menu\box_topright.gif" />
+    <Content Include="images\BaseFramework\Menu\close.gif" />
+    <Content Include="images\BaseFramework\Menu\close_on.gif" />
+    <Content Include="images\BaseFramework\Menu\Cshare.gif" />
+    <Content Include="images\BaseFramework\Menu\Delphi.gif" />
+    <Content Include="images\BaseFramework\Menu\folder_add.gif" />
+    <Content Include="images\BaseFramework\Menu\folder_move.gif" />
+    <Content Include="images\BaseFramework\Menu\open.gif" />
+    <Content Include="images\BaseFramework\Menu\open_on.gif" />
+    <Content Include="images\BaseFramework\Menu\Perl.gif" />
+    <Content Include="images\BaseFramework\Menu\PHP.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_active_bg.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_active_left.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_active_right.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_bg.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_top_bg.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_unactive_bg.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_unactive_left.gif" />
+    <Content Include="images\BaseFramework\Menu\tab_unactive_right.gif" />
+    <Content Include="images\BaseFramework\Menu\twist.gif" />
+    <Content Include="images\BaseFramework\MinLogo.gif" />
+    <Content Include="images\BaseFramework\NotImage.gif" />
+    <Content Include="images\BaseFramework\right.gif" />
+    <Content Include="images\BaseFramework\sort_asc.gif" />
+    <Content Include="images\BaseFramework\sort_desc.gif" />
+    <Content Include="images\BaseFramework\thead_bg.gif" />
+    <Content Include="images\BaseFramework\top-gray.gif" />
+    <Content Include="images\BaseFramework\up01.gif" />
+    <Content Include="images\BaseFramework\userset.gif" />
+    <Content Include="images\BaseFramework\wrong.gif" />
+    <Content Include="MainPage\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\BaseFramework\Index\menu1bg.gif" />
+    <Content Include="images\BaseFramework\Index\menubg.jpg" />
+    <Content Include="images\BaseFramework\Index\top-2-1.gif" />
+    <Content Include="images\BaseFramework\Index\top-2-2.gif" />
+    <Content Include="images\BaseFramework\Index\top-b-1.gif" />
+    <Content Include="images\BaseFramework\Index\top-b-2-1-2.gif" />
+    <Content Include="images\BaseFramework\Index\top-b-2-2.gif" />
+    <Content Include="images\BaseFramework\Index\top-b-2.gif" />
+    <Content Include="images\BaseFramework\Index\top-b-3-2.gif" />
+    <Content Include="images\BaseFramework\Index\top-b-3.gif" />
+    <Content Include="images\BaseFramework\Index\top-b4-1.gif" />
+    <Content Include="images\BaseFramework\Index\top-b4-2.gif" />
+    <Content Include="images\BaseFramework\Index\top-b4-b.gif" />
+    <Content Include="images\BaseFramework\Index\top-b4-c.gif" />
+    <Content Include="images\BaseFramework\Index\top-b4-yellow.gif" />
+    <Content Include="MainPage\App_LocalResources\Left.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainPage\App_LocalResources\Menu2.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainPage\App_LocalResources\Right.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\BaseFramework\ICON\1.gif" />
+    <Content Include="images\BaseFramework\ICON\10.gif" />
+    <Content Include="images\BaseFramework\ICON\2.gif" />
+    <Content Include="images\BaseFramework\ICON\3.gif" />
+    <Content Include="images\BaseFramework\ICON\4.gif" />
+    <Content Include="images\BaseFramework\ICON\5.gif" />
+    <Content Include="images\BaseFramework\ICON\6.gif" />
+    <Content Include="images\BaseFramework\ICON\7.gif" />
+    <Content Include="images\BaseFramework\ICON\8.gif" />
+    <Content Include="images\BaseFramework\ICON\9.gif" />
+    <Content Include="images\BaseFramework\ICON\a.gif" />
+    <Content Include="images\BaseFramework\ICON\Area.png" />
+    <Content Include="images\BaseFramework\ICON\b.gif" />
+    <Content Include="images\BaseFramework\ICON\back.gif" />
+    <Content Include="images\BaseFramework\ICON\Colume.png" />
+    <Content Include="images\BaseFramework\ICON\default.gif" />
+    <Content Include="images\BaseFramework\ICON\delete.gif" />
+    <Content Include="images\BaseFramework\ICON\doc.gif" />
+    <Content Include="images\BaseFramework\ICON\edit.gif" />
+    <Content Include="images\BaseFramework\ICON\generic.gif" />
+    <Content Include="images\BaseFramework\ICON\html2.gif" />
+    <Content Include="images\BaseFramework\ICON\icon.gif" />
+    <Content Include="images\BaseFramework\ICON\Line.png" />
+    <Content Include="images\BaseFramework\ICON\list.gif" />
+    <Content Include="images\BaseFramework\ICON\look.gif" />
+    <Content Include="images\BaseFramework\ICON\move.gif" />
+    <Content Include="images\BaseFramework\ICON\new.gif" />
+    <Content Include="images\BaseFramework\ICON\office.gif" />
+    <Content Include="images\BaseFramework\ICON\orderby.gif" />
+    <Content Include="images\BaseFramework\ICON\paperclip.gif" />
+    <Content Include="images\BaseFramework\ICON\ppt.gif" />
+    <Content Include="images\BaseFramework\ICON\print.gif" />
+    <Content Include="images\BaseFramework\ICON\print_icon.gif" />
+    <Content Include="images\BaseFramework\ICON\refresh.ico" />
+    <Content Include="images\BaseFramework\ICON\select.gif" />
+    <Content Include="images\BaseFramework\ICON\sound.gif" />
+    <Content Include="images\BaseFramework\ICON\txt.gif" />
+    <Content Include="images\BaseFramework\ICON\xls.gif" />
+    <Content Include="images\BaseFramework\ICON\zip.gif" />
+    <Content Include="MasterPage\PageTemplate.Master" />
+    <Content Include="UC\UCMenuHead.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\AspNetPager.skin" />
+    <Content Include="App_Themes\Default\DataList.skin" />
+    <Content Include="App_Themes\Default\GridView.skin" />
+    <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\AddPage.aspx" />
+    <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx" />
+    <Content Include="UC\UCToolBar.ascx" />
+    <Content Include="webctrl_client\1_0\images\folder.gif" />
+    <Content Include="webctrl_client\1_0\images\folderopen.gif" />
+    <Content Include="webctrl_client\1_0\images\html.gif" />
+    <Content Include="webctrl_client\1_0\images\root.gif" />
+    <Content Include="webctrl_client\1_0\MultiPage.htc" />
+    <Content Include="webctrl_client\1_0\TabStrip.htc" />
+    <Content Include="webctrl_client\1_0\toolbar.htc" />
+    <Content Include="webctrl_client\1_0\treeimages\f.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\fminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\fplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\i.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\L.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\Lminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\Lplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\minus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\plus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\r.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\Rminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\Rplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\F.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Fminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Fplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\I.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\L.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Lminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Lplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\minus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\plus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\r.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Rminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Rplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\T.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Tminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\Tplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\rtl\white.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\T.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\Tminus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\Tplus.gif" />
+    <Content Include="webctrl_client\1_0\treeimages\white.gif" />
+    <Content Include="webctrl_client\1_0\treeview.htc" />
+    <Content Include="webctrl_client\1_0\webservice.htc" />
+    <Content Include="webctrl_client\1_0\webserviced.htc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="DialogPage\" />
+    <Folder Include="images\BaseFramework\OperationIcon\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Moudle\BaseFrameWork\SystemMaintenance\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12907</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
