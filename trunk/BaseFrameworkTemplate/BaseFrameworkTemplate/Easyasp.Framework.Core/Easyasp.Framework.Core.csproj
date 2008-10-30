@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BaseManageFramework.Web\bin\AspNetPager.dll</HintPath>
+    </Reference>
     <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Spring.NET 1.2.0 M1\lib\Net\2.0\Common.Logging.dll</HintPath>
@@ -85,6 +89,7 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -366,9 +371,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Web\UI\GridViewIDConverter.cs" />
-    <Compile Include="Web\UI\LastNavigatePageInfo.cs" />
     <Compile Include="Web\UI\MessageType.cs" />
     <Compile Include="Web\UI\SuperWebTreeNode.cs" />
+    <Compile Include="Web\UI\WebControls\DataView.cs" />
     <Compile Include="Web\UI\WebControls\GridViewFunctionExtenderDesigner.cs" />
     <Compile Include="Web\UI\WebControls\GridViewFunctionExtender.cs" />
     <Compile Include="Web\UI\WebControls\GridViewTableCell.cs" />

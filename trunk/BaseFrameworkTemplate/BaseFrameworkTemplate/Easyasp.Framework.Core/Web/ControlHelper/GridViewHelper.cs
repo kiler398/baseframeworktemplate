@@ -150,6 +150,37 @@ namespace Easyasp.Framework.Core.Web.ControlHelper
             return selectIndex;
         }
 
+        public static List<int> GetSelectDataKeys(GridView gridView, string selectCheckBoxControlID)
+        {
+            List<int> selectDataKeys = new List<int>();
+            //没有数据类直接返回。
+            if (!CheckGridViewHasDataRow(gridView))
+            {
+                return selectDataKeys;
+            }
+            foreach (GridViewRow gridViewRow in gridView.Rows)
+            {
+                if (gridViewRow.RowType == DataControlRowType.DataRow)
+                {
+                    Control chk = FindControlInRow(selectCheckBoxControlID,
+                                                   gridViewRow);
+                    if (chk is CheckBox)
+                    {
+                        CheckBox wchk = (CheckBox)chk;
+                        if (wchk.Checked)
+                            selectDataKeys.Add(int.Parse(gridView.DataKeys[gridViewRow.RowIndex].ToString()));
+                    }
+                    else if (chk is HtmlInputCheckBox)
+                    {
+                        HtmlInputCheckBox hchk = (HtmlInputCheckBox)chk;
+                        if (hchk.Checked)
+                            selectDataKeys.Add(int.Parse(gridView.DataKeys[gridViewRow.RowIndex].ToString()));
+                    }
+                }
+            }
+            return selectDataKeys;
+        }
+
 
         public static string GenerateSelectAllCheckBoxScript(string gridViewID)
         {

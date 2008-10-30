@@ -27,35 +27,35 @@ namespace Easyasp.Framework.Core.BaseManage.SpringBase.Services.Service
 
 
 
-        public void AuthenticateRequestUser()
-        {
-            FormsAuthenticationTicket authTicket = this.GetTicket(HttpContext.Current);
-            if (null != authTicket)
-            {
-                FormsIdentity id = new FormsIdentity(authTicket);
-                Pair userData = this.GetUserData(HttpContext.Current);
-                List<SystemRole> roles = null;
-                SystemUser systemUser = null;
-                if (userData != null)
-                {
-                    roles = (List<SystemRole>)userData.Second;
-                    systemUser = (SystemUser)userData.First;
-                }
-                else
-                {
-                    roles = new List<SystemRole>();
-                    systemUser = null;
-                }
-                HttpContext.Current.Items["Context_Key_LoginUser"] = systemUser;
-                HttpContext.Current.Items["Context_Key_LoginUserAssignRole"] = roles;
-                List<string> listRoleName = new List<string>();
-                foreach (SystemRole role in roles)
-                {
-                    listRoleName.Add(role.RoleName);
-                }
-                HttpContext.Current.User = new LoginPermissionPrincipal(id, listRoleName);
-            }
-        }
+        //public void AuthenticateRequestUser()
+        //{
+        //    FormsAuthenticationTicket authTicket = this.GetTicket(HttpContext.Current);
+        //    if (null != authTicket)
+        //    {
+        //        FormsIdentity id = new FormsIdentity(authTicket);
+        //        Pair userData = this.GetUserData(HttpContext.Current);
+        //        List<SystemRole> roles = null;
+        //        SystemUser systemUser = null;
+        //        if (userData != null)
+        //        {
+        //            roles = (List<SystemRole>)userData.Second;
+        //            systemUser = (SystemUser)userData.First;
+        //        }
+        //        else
+        //        {
+        //            roles = new List<SystemRole>();
+        //            systemUser = null;
+        //        }
+        //        HttpContext.Current.Items["Context_Key_LoginUser"] = systemUser;
+        //        HttpContext.Current.Items["Context_Key_LoginUserAssignRole"] = roles;
+        //        List<string> listRoleName = new List<string>();
+        //        foreach (SystemRole role in roles)
+        //        {
+        //            listRoleName.Add(role.RoleName);
+        //        }
+        //        HttpContext.Current.User = new LoginPermissionPrincipal(id, listRoleName);
+        //    }
+        //}
 
         public override void Create(SystemUser obj)
         {
@@ -76,42 +76,49 @@ namespace Easyasp.Framework.Core.BaseManage.SpringBase.Services.Service
 
         public SystemUser GetCurrentLoginUser()
         {
-            if (HttpContext.Current.Items["Context_Key_LoginUser"] == null)
+            if (HttpContext.Current.User != null && HttpContext.Current.User.Identity != null && HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                if (HttpContext.Current.Session["CurrentLoginUser"] == null)
+                {
+                    HttpContext.Current.Session["CurrentLoginUser"] = this.GetUserByLoginID(HttpContext.Current.User.Identity.Name.ToString());
+                }
+                return HttpContext.Current.Session["CurrentLoginUser"] as SystemUser;
+            }
+            else
             {
                 return null;
             }
-            return (SystemUser)HttpContext.Current.Items["Context_Key_LoginUser"];
         }
 
-        public List<SystemRole> GetCurrentLoginUserAssignedRole()
-        {
-            if (HttpContext.Current.Items["Context_Key_LoginUserAssignRole"] == null)
-            {
-                return new List<SystemRole>();
-            }
-            return (List<SystemRole>)HttpContext.Current.Items["Context_Key_LoginUserAssignRole"];
-        }
+        //public List<SystemRole> GetCurrentLoginUserAssignedRole()
+        //{
+        //    if (HttpContext.Current.Items["Context_Key_LoginUserAssignRole"] == null)
+        //    {
+        //        return new List<SystemRole>();
+        //    }
+        //    return (List<SystemRole>)HttpContext.Current.Items["Context_Key_LoginUserAssignRole"];
+        //}
 
-        private FormsAuthenticationTicket GetTicket(HttpContext context)
-        {
-            string cookieName = FormsAuthentication.FormsCookieName;
-            HttpCookie authCookie = context.Request.Cookies[cookieName];
-            if (null == authCookie)
-            {
-                return null;
-            }
-            FormsAuthenticationTicket authTicket = null;
-            try
-            {
-                authTicket = FormsAuthentication.Decrypt(authCookie.Value);
-            }
-            catch (Exception ex)
-            {
-                base.Logger.Error(ex.Message);
-                return null;
-            }
-            return authTicket;
-        }
+        //private FormsAuthenticationTicket GetTicket(HttpContext context)
+        //{
+        //    string cookieName = FormsAuthentication.FormsCookieName;
+        //    HttpCookie authCookie = context.Request.Cookies[cookieName];
+        //    if (null == authCookie)
+        //    {
+        //        return null;
+        //    }
+        //    FormsAuthenticationTicket authTicket = null;
+        //    try
+        //    {
+        //        authTicket = FormsAuthentication.Decrypt(authCookie.Value);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        base.Logger.Error(ex.Message);
+        //        return null;
+        //    }
+        //    return authTicket;
+        //}
 
         public List<SystemRole> GetUserAssignedRoleByUserLoginID(string loginID)
         {
