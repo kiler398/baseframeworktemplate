@@ -9,24 +9,24 @@ using BaseManageFramework.Web.UC;
 using Easyasp.Framework.Core.BaseManage.SpringBase.Domains.Domain;
 using Easyasp.Framework.Core.BaseManage.SpringBase.Services.Service;
 using Easyasp.Framework.Core.Utility;
+using Easyasp.Framework.Core.Web;
 using Easyasp.Framework.Core.Web.ControlHelper;
+using Easyasp.Framework.Core.Web.UI;
+using Spring.Context.Support;
 using CommandEventArgs=BaseManageFramework.Web.UC.CommandEventArgs;
 
 namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.ApplicationManage
 {
     public partial class ListPage : System.Web.UI.Page
     {
-        public SystemApplicationService SystemApplicationServiceInstance { set; get; }
+        public ServicesContainer ServicesContainerInstance { get; set;}
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Page.IsPostBack)
                 return;
-            if (this.Context.Items["QueryCondition"] != null)
-                QueryCondition = (Hashtable) this.Context.Items["QueryCondition"];
             ListBind();
         }
-
 
         protected Hashtable QueryCondition
         {
@@ -34,42 +34,15 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
             set { this.ViewState["QueryCondition"] = value; }
         }
 
-        protected override void OnInit(EventArgs e)
-        {
-            base.OnInit(e);
-            this.UCMenuHead1.RaiseComandEvent += new EventHandler<CommandEventArgs>(UCMenuHead1_OnRaiseComandEvent);
-        }
-
-        private void UCMenuHead1_OnRaiseComandEvent(object sender, CommandEventArgs e)
-        {
-            switch (e.CommandName)
-            {
-                case SystemOperationService.Operation_Add:
-                    this.Context.Items["QueryCondition"] = this.QueryCondition;
-                    this.Server.Transfer("AddPage.aspx");
-                    break;
-                case SystemOperationService.Operation_Edit:
-                    this.Server.Transfer("EditPage.aspx");
-                    break;
-                case SystemOperationService.Operation_View:
-                    this.Server.Transfer("EditPage.aspx");
-                    break;
-                case SystemOperationService.Operation_Delete:
-                    break;
-            }
-            ListBind();
-        }
-
         private void ListBind()
         {
             int record = 0;
             List<SystemApplication> list =
-                SystemApplicationServiceInstance.GetQueryPageList(this.Pager.StartRecordIndex - 1, this.Pager.PageSize,
+                ServicesContainerInstance.SystemApplicationServiceInstance.GetQueryPageList(this.Pager.StartRecordIndex - 1, this.Pager.PageSize,
                                                                   this.QueryCondition, "", true, out record);
-            DataBindHelper.BindListDataToGridView<SystemApplication>(this.GridView1, list);
+            DataBindHelper.BindListDataToGridView<SystemApplication>(this.grdSystemApplicationList, list);
             this.Pager.RecordCount = record;
-            GridViewHelper.RegisterGridViewSelectAllCheckBoxScript(this, this.GridView1, "chkSelectAll");
-            this.UCMenuHead1.BindData();
+            GridViewHelper.RegisterGridViewSelectAllCheckBoxScript(this, this.grdSystemApplicationList, "chkSelectAll");
         }
 
 
@@ -92,6 +65,44 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
         protected void btnClearQuery_Click(object sender, EventArgs e)
         {
             this.Response.Redirect(this.Request.RawUrl);
+        }
+
+        protected void btnClick(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            switch(btn.CommandName)
+            {
+                case "cmdAdd":
+                    this.Server.Transfer("AddPage.aspx");
+                    break;
+                case "cmdDelete":
+                    try
+                    {
+                        this.ServicesContainerInstance.SystemApplicationServiceInstance.PatchDeleteByTypedIDs<int>(GridViewHelper.GetSelectDataKeys(this.grdSystemApplicationList, "chkSelect").ToArray());
+                        this.lblMessage.Text = "批量删除应用程序成功。";
+                    }
+                    catch (Exception e1)
+                    {
+                        this.lblMessage.Text = "批量删除应用程序失败，错误原因：" + e1.Message;
+                    }
+                    this.ListBind();
+                    break;
+            }
+        }
+
+        protected void grdSystemApplicationList_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int id = GridViewHelper.GetDataKeyInGridViewRowCommandEvent(sender,e);
+            switch (e.CommandName)
+            {
+                case "cmdView":
+                    this.Server.Transfer("ViewPage.aspx?ID="+id.ToString());
+                    break;
+                case "cmdEdit":
+                    this.Server.Transfer("EditPage.aspx?ID="+id.ToString());
+                    break;
+            }
+
         }
     }
 }

@@ -167,12 +167,26 @@
     <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\AddPage.aspx.designer.cs">
       <DependentUpon>AddPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\EditPage.aspx.cs">
+      <DependentUpon>EditPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\EditPage.aspx.designer.cs">
+      <DependentUpon>EditPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx.cs">
       <DependentUpon>ListPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx.designer.cs">
       <DependentUpon>ListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ViewPage.aspx.cs">
+      <DependentUpon>ViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ViewPage.aspx.designer.cs">
+      <DependentUpon>ViewPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC\UCMenuHead.ascx.cs">
@@ -188,13 +202,6 @@
     </Compile>
     <Compile Include="UC\UCMessage.ascx.designer.cs">
       <DependentUpon>UCMessage.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UCToolBar.ascx.cs">
-      <DependentUpon>UCToolBar.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UC\UCToolBar.ascx.designer.cs">
-      <DependentUpon>UCToolBar.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -347,8 +354,9 @@
     <Content Include="App_Themes\Default\DataList.skin" />
     <Content Include="App_Themes\Default\GridView.skin" />
     <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\AddPage.aspx" />
+    <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\EditPage.aspx" />
     <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx" />
-    <Content Include="UC\UCToolBar.ascx" />
+    <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ViewPage.aspx" />
     <Content Include="webctrl_client\1_0\images\folder.gif" />
     <Content Include="webctrl_client\1_0\images\folderopen.gif" />
     <Content Include="webctrl_client\1_0\images\html.gif" />
