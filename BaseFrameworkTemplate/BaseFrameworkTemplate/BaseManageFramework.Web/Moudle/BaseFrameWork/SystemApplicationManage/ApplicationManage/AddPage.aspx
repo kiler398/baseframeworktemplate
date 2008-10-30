@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PageTemplate.Master"
-    AutoEventWireup="true" CodeBehind="AddPage.aspx.cs" Inherits="BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.ApplicationManage.AddPage" %>
+    AutoEventWireup="true" CodeBehind="AddPage.aspx.cs" Inherits="BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.ApplicationManage.AddPage" Theme="Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageBody" runat="server">
     <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server">

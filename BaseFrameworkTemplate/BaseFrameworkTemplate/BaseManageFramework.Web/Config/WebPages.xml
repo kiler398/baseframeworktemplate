@@ -28,11 +28,9 @@
 
 
   <object type="~/Moudle/BaseFrameWork/SystemApplicationManage/ApplicationManage/ListPage.aspx">
-    <property name="SystemApplicationServiceInstance" ref="SystemApplicationServiceIocID"></property>
+    <property name="ServicesContainerInstance" ref="ServicesContainerIocID"></property>
   </object>
 
   <object type="~/UC/UCMenuHead.ascx" abstract="true">
-    <property name="SystemUserServiceInstance" ref="SystemUserServiceIocID"></property>
-    <property name="SystemPrivilegeServiceInstance" ref="SystemPrivilegeServiceIocID"></property>
   </object>
 </objects>

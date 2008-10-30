@@ -12,7 +12,14 @@
         </tr>
         <tr>
             <td align="right">
-                &nbsp;
+                <asp:Label ID="lblMessage" runat="server" EnableViewState="False" 
+                    ForeColor="Red"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <asp:Button ID="btnAdd" runat="server" Text="添加" CommandName="cmdAdd" OnClick="btnClick" />&nbsp;
+                                                        <asp:Button ID="btnDelete" runat="server" CommandName="cmdDelete" Text="删除" OnClick="btnClick" />
             </td>
         </tr>
         <tr>
@@ -23,21 +30,39 @@
                             列表系统应用
                         </HeaderTemplate>
                         <ContentTemplate>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="SystemApplicationID">
-                                <Columns>
-                                    <asp:TemplateField HeaderText="选择">
-                                        <HeaderTemplate>
-                                            <input id="chkSelectAll" runat="server" type="checkbox" />&nbsp;&nbsp;全选
-                                        </HeaderTemplate>
-                                        <ItemTemplate>
-                                            <input id="chkSelect" runat="server" type="checkbox" disabled='<%# Eval("SystemApplicationIsSystemApplication") %>' />
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                    <asp:BoundField HeaderText="应用程序名称" DataField="SystemApplicationName" />
-                                    <asp:BoundField HeaderText="应用程序描述" DataField="SystemApplicationDescription" />
-                                    <asp:BoundField HeaderText="应用程序链接" DataField="SystemApplicationUrl" />
-                                </Columns>
-                            </asp:GridView>
+                            <table border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <asp:GridView ID="grdSystemApplicationList" runat="server" 
+                                            AutoGenerateColumns="False" DataKeyNames="SystemApplicationID" 
+                                            onrowcommand="grdSystemApplicationList_RowCommand">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="选择">
+                                                    <HeaderTemplate>
+                                                        <input id="chkSelectAll" runat="server" type="checkbox" />&nbsp;&nbsp;全选
+                                                    </HeaderTemplate>
+                                                    <ItemTemplate>
+                                                        <input id="chkSelect" runat="server" type="checkbox" disabled='<%# Eval("SystemApplicationIsSystemApplication") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField HeaderText="应用程序名称" DataField="SystemApplicationName" />
+                                                <asp:BoundField HeaderText="应用程序描述" DataField="SystemApplicationDescription" />
+                                                <asp:BoundField HeaderText="应用程序链接" DataField="SystemApplicationUrl" />
+                                                <asp:TemplateField HeaderText="操作管理">
+                                                    <ItemTemplate>
+                                                        <asp:Button ID="btnView" runat="server" CommandName="cmdView" Text="查看" />&nbsp;
+                                                        <asp:Button ID="btnEdit" runat="server" CommandName="cmdEdit" Text="编辑" />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>                <webdiyer:AspNetPager ID="Pager" runat="server" OnPageChanged="Pager_PageChanged">
+                </webdiyer:AspNetPager></td>
+                                </tr>
+                            </table>
                         </ContentTemplate>
                     </AspAjax:TabPanel>
                     <AspAjax:TabPanel ID="TabPanelSearch" runat="server">
@@ -73,12 +98,6 @@
                         </ContentTemplate>
                     </AspAjax:TabPanel>
                 </AspAjax:TabContainer>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <webdiyer:AspNetPager ID="Pager" runat="server" OnPageChanged="Pager_PageChanged">
-                </webdiyer:AspNetPager>
             </td>
         </tr>
     </table>

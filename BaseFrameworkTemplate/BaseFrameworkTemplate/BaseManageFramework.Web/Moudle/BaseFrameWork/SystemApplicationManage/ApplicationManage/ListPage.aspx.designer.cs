@@ -23,6 +23,33 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
         protected global::BaseManageFramework.Web.UC.UCMenuHead UCMenuHead1;
         
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
         /// tabList control.
         /// </summary>
         /// <remarks>
@@ -41,13 +68,22 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
         protected global::AjaxControlToolkit.TabPanel TabPanelMain;
         
         /// <summary>
-        /// GridView1 control.
+        /// grdSystemApplicationList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grdSystemApplicationList;
+        
+        /// <summary>
+        /// Pager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Wuqi.Webdiyer.AspNetPager Pager;
         
         /// <summary>
         /// TabPanelSearch control.
@@ -84,14 +120,5 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClearQuery;
-        
-        /// <summary>
-        /// Pager control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Wuqi.Webdiyer.AspNetPager Pager;
     }
 }

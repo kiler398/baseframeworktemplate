@@ -14,7 +14,9 @@ if (parent!=null && parent.location.href != self.location.href)
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-    <table id="Table3" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+     <table id="Table3" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0">
         <tr>
             <td valign="middle" height="*" align="center">
                 <table id="Table1" cellspacing="0" cellpadding="10" width="641" align="center" border="0"
@@ -109,7 +111,11 @@ if (parent!=null && parent.location.href != self.location.href)
             </td>
         </tr>
     </table>
-    <uc1:UCMessage ID="UCMessage1" runat="server" ButtonStyle=OK />
+    <uc1:UCMessage ID="UCMessage1" runat="server" ButtonStyle=OK />   
+    
+    </ContentTemplate>
+    </asp:UpdatePanel>
+
     </form>
 </body>
 </html>

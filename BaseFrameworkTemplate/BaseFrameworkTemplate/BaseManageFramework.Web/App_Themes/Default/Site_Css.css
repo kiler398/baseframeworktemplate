@@ -333,6 +333,7 @@ font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
 	background-color: ButtonFace;
 	border-left: solid 1px buttonshadow;
 	border-bottom: solid 1px buttonshadow;
+	border-right: solid 1px buttonshadow;
 }
 
 .menubar_menu_td
