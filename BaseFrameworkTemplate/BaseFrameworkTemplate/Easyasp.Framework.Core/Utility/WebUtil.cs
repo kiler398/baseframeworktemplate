@@ -9,6 +9,15 @@ namespace Easyasp.Framework.Core.Utility
 {
     public static class WebUtil
     {
+
+        public static string GetRequestInfo()
+        {
+            return string.Format("url:{0}\n refurl:{1}\n  requestType:{2}\n ",
+                                 HttpContext.Current.Request.Url.ToString(),
+                                 HttpContext.Current.Request.UrlReferrer.ToString(),
+                                 HttpContext.Current.Request.RequestType.ToString());
+        }
+
         public static string GetRefrenceUrl()
         {
             return HttpContext.Current.Request.UrlReferrer.ToString();

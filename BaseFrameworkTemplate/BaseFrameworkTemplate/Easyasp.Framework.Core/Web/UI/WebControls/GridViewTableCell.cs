@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web.UI.WebControls;
 
-namespace Powerasp.Enterprise.Core.Web.UI.WebControls
+namespace Easyasp.Framework.Core.Web.UI.WebControls
 {
     /// <summary>
     /// GridViewTableCell
