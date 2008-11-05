@@ -351,8 +351,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Default\AspNetPager.skin" />
+    <Content Include="App_Themes\Default\datagrid.css" />
     <Content Include="App_Themes\Default\DataList.skin" />
+    <Content Include="App_Themes\Default\detailgrid.css" />
     <Content Include="App_Themes\Default\GridView.skin" />
+    <Content Include="App_Themes\Default\thickbox.css" />
+    <Content Include="images\BaseFramework\loading.gif" />
+    <Content Include="images\BaseFramework\mt_back.gif" />
+    <Content Include="js\jquery-1.2.6.min.js" />
+    <Content Include="js\thickbox-compressed.js" />
     <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\AddPage.aspx" />
     <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\EditPage.aspx" />
     <Content Include="Moudle\BaseFrameWork\SystemApplicationManage\ApplicationManage\ListPage.aspx" />

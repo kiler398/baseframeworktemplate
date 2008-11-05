@@ -15,16 +15,9 @@ Default skin template. The following skins are provided as examples only.
 --%>
 
 <asp:GridView runat="server"
-    AutoGenerateColumns="false" 
-    HeaderStyle-CssClass="table_title"
-    CssClass = "table-box"
-    HeaderStyle-HorizontalAlign="Center"    
+    AutoGenerateColumns="false"
     ShowFooter="false"	
-    cellspacing="1"
-    border="0"
-    AllowSorting="True"
-    RowStyle-HorizontalAlign="Center"    
-    RowStyle-Height="28px"   EmptyDataText="没有符合条件的记录" EmptyDataRowStyle-Font-Bold="true"
-    >    
-<RowStyle CssClass="row" /> 
+    AllowSorting="True" CssClass="datagrid" GridLines="None"
+    EmptyDataText="没有符合条件的记录" EmptyDataRowStyle-Font-Bold="true"
+    >
 </asp:GridView>

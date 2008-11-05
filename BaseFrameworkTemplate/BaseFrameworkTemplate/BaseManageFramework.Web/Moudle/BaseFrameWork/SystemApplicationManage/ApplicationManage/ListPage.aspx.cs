@@ -104,5 +104,10 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
             }
 
         }
+
+        protected void btnUpdatePage_Click(object sender, EventArgs e)
+        {
+            ListBind();
+        }
     }
 }
