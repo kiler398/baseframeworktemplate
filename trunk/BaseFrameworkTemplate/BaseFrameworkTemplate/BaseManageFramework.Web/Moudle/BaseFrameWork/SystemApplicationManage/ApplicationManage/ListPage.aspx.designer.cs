@@ -14,6 +14,15 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
     public partial class ListPage {
         
         /// <summary>
+        /// ScriptManagerProxy1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManagerProxy ScriptManagerProxy1;
+        
+        /// <summary>
         /// UCMenuHead1 control.
         /// </summary>
         /// <remarks>
@@ -30,6 +39,15 @@ namespace BaseManageFramework.Web.Moudle.BaseFrameWork.SystemApplicationManage.A
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
+        /// btnUpdatePage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdatePage;
         
         /// <summary>
         /// btnAdd control.

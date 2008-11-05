@@ -39,5 +39,14 @@ namespace TestWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::NickLee.Web.UI.BusyBox.BusyBox BusyBox1;
+        
+        /// <summary>
+        /// DataView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Easyasp.Framework.Core.Web.UI.WebControls.DataView DataView1;
     }
 }

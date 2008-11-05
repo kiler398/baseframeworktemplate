@@ -161,6 +161,7 @@ namespace Easyasp.Framework.Core.BaseManage.SpringBase.Domains.BaseDomain
 				_isChanged |= (_log_descrption != value); _log_descrption = value;
 			}
 		}
+
 		/// <summary>
 		/// 日志请求信息
 		/// </summary>		
@@ -170,7 +171,7 @@ namespace Easyasp.Framework.Core.BaseManage.SpringBase.Domains.BaseDomain
 			set	
 			{
 				if ( value != null)
-					if( value.Length > 200)
+                    if (value.Length > 2000)
 						throw new ArgumentOutOfRangeException("Invalid value for LogRequestInfo", value, value.ToString());
 				
 				_isChanged |= (_log_requestinfo != value); _log_requestinfo = value;
