@@ -1,0 +1,113 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #444444; FONT-SIZE: 10pt
+}
+P {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #444444; FONT-SIZE: 10pt
+}
+.title {
+	FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.desc {
+	FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.caption {
+	FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.details {
+	FONT-SIZE: 10px
+}
+A:link {
+	COLOR: black
+}
+A:visited {
+	COLOR: black
+}
+A:active {
+	COLOR: black
+}
+A:hover {
+	COLOR: #6699ff
+}
+A.sidebar:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.sidebar:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.sidebar:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.sidebar:hover {
+	COLOR: red
+}
+.menutext {
+	COLOR: black; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+.nav {
+	FONT-SIZE: 12px
+}
+.bread {
+	COLOR: black; FONT-SIZE: 11px
+}
+.editlink {
+	FONT-SIZE: 10px
+}
+.head {
+	COLOR: black; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.center {
+	TEXT-ALIGN: center
+}
+TABLE.comments {
+	WIDTH: 100%
+}
+TABLE.breadcrumb {
+	WIDTH: 100%
+}
+TABLE.nav {
+	WIDTH: 100%
+}
+TABLE.thumbs {
+	WIDTH: 100%
+}
+TABLE.menubox {
+	WIDTH: 100%
+}
+TABLE.header {
+	WIDTH: 100%
+}
+.tt {
+	BACKGROUND-IMAGE: url(http://static.fotop.net/images/tt12_m.gif)
+}
+.tt12bkg {
+	BACKGROUND: url(http://static.fotop.net/images/tt12_m.gif) repeat-x; HEIGHT: 10px
+}
+.tb12bkg {
+	BACKGROUND: url(http://static.fotop.net/images/tb12_m.gif) repeat-x; HEIGHT: 10px
+}
+.tc12lbkg {
+	BACKGROUND: url(http://static.fotop.net/images/tc12_l.gif) repeat-y; HEIGHT: 10px
+}
+.tc12rbkg {
+	BACKGROUND: url(http://static.fotop.net/images/tc12_r.gif) repeat-y; HEIGHT: 10px
+}
+.tt22bkg {
+	WIDTH: 100%; BACKGROUND: url(http://static.fotop.net/images/tt22_m.gif) repeat-x; HEIGHT: 22px
+}
+.tb22bkg {
+	WIDTH: 100%; BACKGROUND: url(http://static.fotop.net/images/tb22_m.gif) repeat-x; HEIGHT: 22px
+}
+.ttb {
+	WIDTH: 100%
+}
+#text {
+	WIDTH: 100px; DISPLAY: none; HEIGHT: 100px
+}
+INPUT.submit {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BACKGROUND: #fafafa; FONT-SIZE: 11px; BORDER-TOP: #000000 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #000000 1px solid
+}
+
+
