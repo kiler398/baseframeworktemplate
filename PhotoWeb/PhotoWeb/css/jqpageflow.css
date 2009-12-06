@@ -1,0 +1,6 @@
+.jqpageflow-loader {
+	Z-INDEX: 10001; POSITION: absolute; BOTTOM: 0px; DISPLAY: none; RIGHT: 1%
+}
+.jqpageflow-loadertext {
+	POSITION: absolute; TEXT-ALIGN: center; WIDTH: 80px; BOTTOM: 25px; FONT-SIZE: 70%; LEFT: 2px
+}

@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PhotoWeb.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table border="1" width="100%">
+        <tr>
+            <td width="15%" valign="top">
+                <table border="0" width="100%">
+                    <tr>
+                        <td>
+                            <a href="AlbumManage.aspx">相册管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="GuestookManage.aspx">留言管理</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
